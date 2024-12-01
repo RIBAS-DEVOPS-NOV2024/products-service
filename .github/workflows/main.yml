@@ -57,4 +57,4 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: iribastrillo/orders-service:latest
+        tags: iribastrillo/products-service:latest
