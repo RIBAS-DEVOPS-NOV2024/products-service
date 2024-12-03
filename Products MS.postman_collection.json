@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "b303d8f5-497e-4d58-8e5c-1ab3ac924e9d",
+		"name": "Products MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14224057",
+		"_collection_link": "https://speeding-eclipse-403714.postman.co/workspace/My-Workspace~ce7698d8-0037-4956-8b27-8591f852b321/collection/14224057-b303d8f5-497e-4d58-8e5c-1ab3ac924e9d?action=share&source=collection_link&creator=14224057"
+	},
+	"item": [
+		{
+			"name": "GET products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_GATEWAY_IP}}/products",
+					"host": [
+						"{{API_GATEWAY_IP}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_GATEWAY_IP}}/products/321",
+					"host": [
+						"{{API_GATEWAY_IP}}"
+					],
+					"path": [
+						"products",
+						"321"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_GATEWAY_IP",
+			"value": "localhost",
+			"type": "string"
+		}
+	]
+}
