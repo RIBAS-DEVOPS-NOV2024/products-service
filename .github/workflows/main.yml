@@ -31,7 +31,9 @@ jobs:
       run: nohup java -jar /home/runner/work/products-service/products-service/target/products-service-example-0.0.1-SNAPSHOT-spring-boot.jar  > app.log 2>&1 & disown
       
     - name: Install Newman
-      run: npm install -g newman
+      run: |
+        npm install -g newman
+        npm install -g newman-reporter-html
 
     - name: Run Postman tests
       run: |
