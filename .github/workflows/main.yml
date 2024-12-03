@@ -28,8 +28,8 @@ jobs:
       run: mvn clean package -DskipTests
 
     - name: Run the app
-      run: java -jar /app/target/products-service-example-0.0.1-SNAPSHOT.jar
-
+      run: java -jar /app/target/products-service-example-0.0.1-SNAPSHOT.jar/home/runner/work/products-service/products-service/target/products-service-example-0.0.1-SNAPSHOT-spring-boot.jar
+      
     - name: Install Newman
       run: npm install -g newman
 
