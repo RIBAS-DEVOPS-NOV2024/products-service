@@ -23,6 +23,23 @@ jobs:
       with:
         java-version: '17'
         distribution: 'zulu'
+      
+    - name: Build the app
+      run: mvn clean package -DskipTests
+
+    - name: Run the app
+      run: java -jar products-service-example-0.0.1-SNAPSHOT.jar
+
+    - name: Install Newman
+      run: npm install -g newman
+
+    - name: Run Postman tests
+      run: |
+        newman run "Products MS.postman_collection.json" \
+          --environment testing.postman_environment.json \
+          --delay-request 100 \
+          --reporters cli,html \
+          --reporter-html-export newman-report.html
 
     - name: Cache SonarQube Cloud packages
       uses: actions/cache@v4
