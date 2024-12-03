@@ -68,7 +68,7 @@
 	"variable": [
 		{
 			"key": "API_GATEWAY_IP",
-			"value": "localhost",
+			"value": "localhost:8080",
 			"type": "string"
 		}
 	]
